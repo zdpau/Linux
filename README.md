@@ -64,5 +64,51 @@ cd / 代表进入根目录， ls / 代表查看根目录的文件
 
 /usr/bin - Another location for programs on the system.（另一个位置的程序系统。）
 
+八、
+
+Everything is a File
+
+Linux is an Extensionless System。在linux下，原本是图像文件，你就是改了扩展名，打开还是图像。
+
+使用file [path]看出是什么文件
+
+Linux is Case Sensitive。
+
+例如：FILE1.txt File1.txt file1.TXT
+
+Linux将这些都视为不同的和独立的文件。
+
+file Documents/file1.txt
+
+Documents/file1.txt: ERROR: cannot open 'file1.txt' (No such file or directory)
+
+九、
+
+cd Holiday Photos, 想进入Holiday Photos这个目录输入这个是不行的，因为Holiday Photos被视为两个命令行参数。CD移动到第一个命令行参数指定的目录中。为了解决这个问题，我们需要确定终端，我们希望假日照片被看作是一个单一的命令行参数。有两种方法可以做到这一点，无论哪种方式都是有效的。
+
+第一种：Quotes 引号
+
+cd 'Holiday Photos'
+
+第二种：Escape Characters 转义字符，反斜杠backslash （\）
+
+cd Holiday\ Photos
+
+在上面的例子中，假日和照片之间的空间通常有一个特殊的意义，就是把它们分隔成不同的命令行参数。因为我们放置一个反斜杠在它前面，那特殊的意义被删除。
+
+如果您在遇到目录名中的空格之前使用它，那么终端将自动为您取消名称中的空格。？？？？？
+
+如果文件或目录的名称以 . (full stop) 然后它被认为是隐藏的。
+
+要使文件或目录隐藏起来，您所需要做的就是创建文件或目录名称为.或者重命名为.  同样，您可以重命名隐藏文件以删除“.”
+它将成为公开的。
+
+我们可以使用ls -a 来查看隐藏文件
+
+
+
+
+
+
 
 
