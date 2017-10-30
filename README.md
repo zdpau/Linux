@@ -66,11 +66,11 @@ cd / 代表进入根目录， ls / 代表查看根目录的文件
 
 八、
 
-Everything is a File
+Everything is a File (Even directories.)
 
 Linux is an Extensionless System。在linux下，原本是图像文件，你就是改了扩展名，打开还是图像。
 
-使用file [path]看出是什么文件
+使用file [path]看出是什么文件(obtain information about what type of file a file or directory is.)
 
 Linux is Case Sensitive。
 
