@@ -105,6 +105,80 @@ cd Holiday\ Photos
 
 我们可以使用ls -a 来查看隐藏文件
 
+十、
+
+man <command to look up>
+
+man ls
+
+Name
+
+  3、  ls - list directory contents
+    
+ 
+Synopsis
+
+  6、  ls [option] ... [file] ...
+ 
+Description
+
+  9、  List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+ 
+  11、  Mandatory arguments to long options are mandatory for short options too.
+ 
+    -a, --all
+    
+        do not ignore entries starting with .
+ 
+    -A, --almost-all
+    
+        do not list implied . and ..
+        
+第3行告诉我们实际的命令，后面是对函数简单的一行描述。
+
+第6行是所谓的大纲。这只是对命令应该如何运行的一个快速概述。方括号（[]）表示某物是可选的。（这一行的选项指的是下面描述的命令行选项）
+
+第9行向我们提供了对命令的更详细的描述。
+
+11行在下面描述的病房都会列出所有的命令行选项的命令都是可用的。
+
+“”“”“To exit the man pages press 'q' for quit.“”“”
+
+man -k <search term> （Do a keyword search for all manual pages containing the given search term.）  
+  
+对包含给定搜索词的所有手册页进行关键字搜索。
+  
+man -k后跟要搜寻的关键词。例如man -k ad则显示man手册中所有包含ad的命令或说明文件并列条显示
+  
+如果您想在手册页中搜索，这也是可能的。要做到这一点，当你在特定的手册页，你想搜索按下斜线' / '，然后输入搜索的术语，并点击'enter',如果这个词出现多次，你可以循环通过他们按' N '按钮下一个。
+
+长命令行选项以两个破折号（-）开始，短选项从一个破折号（-）开始。当我们使用单个破折号时，我们可以在破折号之后放置代表这些选项的所有字母来调用几个选项。
+
+eg:ls -l ; ls --all ; ls -alh
+
+十一、
+
+mkdir which is short for Make Directory.
+
+mkdir [options] <Directory> 
+  
+
+第一个是-p，它告诉mkdir根据需要make父目录。
+
+mkdir -p a/b/c 
+
+在当前目录下建立一个a/b/c的文件路径
+
+第二个是-v，这使得mkdir告诉我们它在做什么
+
+mkdir -pv linuxtutorialwork/foo/bar
+
+mkdir: created directory 'linuxtutorialwork/foo'
+
+mkdir: created directory 'linuxtutorialwork/foo/bar'
+
+
+
 
 
 
