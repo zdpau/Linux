@@ -1,8 +1,8 @@
 # Linux
 
-Linux中的许多事情不是直接完成的，而是通过了解系统的某些命令和方面的行为，并以创造性的方式使用它们来达到预期的结果。请记住，在介绍中，我们讨论了命令行，为您提供了一系列构建块。您可以随意使用这些构建块，但如果您了解它们是如何发挥功能的，那么您就可以真正有效地完成这些功能。（Many things in Linux are not done directly but by knowing the behaviour of certain commands and aspects of the system and using them in creative ways to achieve the desired outcome.
+Linux中的许多事情不是直接完成的，而是通过了解系统的某些命令和方面的行为，并以创造性的方式使用它们来达到预期的结果。请记住，在介绍中，我们讨论了命令行，为您提供了一系列构建块。您可以随意使用这些构建块，但如果您了解它们是如何发挥功能的，那么您就可以真正有效地完成这些功能。（Many things in Linux are not done directly but by knowing the behaviour of certain commands and aspects of the system and using them in creative ways to achieve the desired outcome.Remember in the introduction we talked about the command line as providing you with a series of building blocks. You are free to use these building blocks in any way you like but you can really only do this effectively if you understand how they do their function as well as why.）
 
-Remember in the introduction we talked about the command line as providing you with a series of building blocks. You are free to use these building blocks in any way you like but you can really only do this effectively if you understand how they do their function as well as why.）
+每当我们在命令行引用一个文件或目录时，它实际上是一条路径。因此，它可以被指定为绝对路径或相对路径。
 
 一、
 
@@ -263,6 +263,15 @@ backups example1 foo3 fred
 十六、删除文件（和非空目录）
 
 rm [options] <file>
+
+-r 它代表递归。当使用R选项运行RM时，它允许我们删除目录和包含在其中的所有文件和目录。
+
+与R相结合的一个很好的选择是代表交互的i。此选项将在删除每个文件和目录之前提示您，并提供取消命令的选项。
+
+十七、Vi
+
+在VI中有两种模式：插入（或输入）模式和编辑模式。在输入模式下，您可以输入或输入内容到文件中。在编辑模式中，可以移动文件，执行删除、复制、搜索和替换、保存等操作。
+
 
 
 
