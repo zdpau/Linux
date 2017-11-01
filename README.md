@@ -1,5 +1,9 @@
 # Linux
 
+Linux中的许多事情不是直接完成的，而是通过了解系统的某些命令和方面的行为，并以创造性的方式使用它们来达到预期的结果。请记住，在介绍中，我们讨论了命令行，为您提供了一系列构建块。您可以随意使用这些构建块，但如果您了解它们是如何发挥功能的，那么您就可以真正有效地完成这些功能。（Many things in Linux are not done directly but by knowing the behaviour of certain commands and aspects of the system and using them in creative ways to achieve the desired outcome.
+
+Remember in the introduction we talked about the command line as providing you with a series of building blocks. You are free to use these building blocks in any way you like but you can really only do this effectively if you understand how they do their function as well as why.）
+
 一、
 
 在终端，你有一个被称为shell的东西,这是操作系统的一部分，它定义了终端的行为方式，并为您查找运行（或执行）命令。有各种各样的shell，但最常见的一种是称为bash的代表Bourne again shell。(This is a part of the operating system that defines how the terminal will behave and looks after running (or executing) commands for you.) 如果你想知道你在使用哪个shell，你可以使用一个名为echo的命令来显示一个系统变量来描述当前shell。回声是用来显示消息的命令。echo $shell
@@ -156,7 +160,7 @@ man -k后跟要搜寻的关键词。例如man -k ad则显示man手册中所有�
 
 eg:ls -l ; ls --all ; ls -alh
 
-十一、
+十一、创建目录
 
 mkdir which is short for Make Directory.
 
@@ -176,6 +180,91 @@ mkdir -pv linuxtutorialwork/foo/bar
 mkdir: created directory 'linuxtutorialwork/foo'
 
 mkdir: created directory 'linuxtutorialwork/foo/bar'
+
+十二、删除目录
+
+rmdir [options] <Directory>
+  
+rmdir支持与mkdir类似的-v和-p选项。其次，一个目录必须是空的，然后再删除它。
+
+十三、创建空白文件
+
+touch [options] <filename>
+
+touch实际上是一个命令，我们可以用来修改文件上的访问和修改时间.
+
+十四、复制文件或目录
+
+cp [options] <source> <destination>
+  
+当我们使用CP时，目的地可以是文件或目录的路径。如果它是一个文件，那么它将创建源的副本(copy)，但将副本指定为目的地指定的文件名。如果我们提供一个目录作为目的地，那么它将把文件复制到该目录中，副本将具有与源相同的名称。
+
+eg:
+
+ls
+example1 foo
+cp example1 barney
+ls
+barney example1 foo
+  
+cp -r
+
+在它的默认行为CP将只复制一个文件（有一个方法来复制几个文件一气呵成，但我们将在第6节。通配符wildcards）。使用R选项，它代表递归，我们可以复制目录。递归是指我们要看一个目录，所有的文件和目录和子目录，在它的内部，去做同样的事情，继续这样做。
+  
+例如：
+
+ls
+barney example1 foo
+cp foo foo2
+cp: omitting directory 'foo'
+cp -r foo foo2
+ls
+barney example1 foo foo2
+
+十五、移动、重命名文件或目录
+
+mv which is short for move。它以类似于cp的方式运行。一个优点是我们可以移动目录而不必提供-r选项。
+
+mv [options] <source> <destination>
+  
+eg:
+
+ls
+barney example1 foo foo2
+mkdir backups
+mv foo2 backups/foo3
+mv barney backups/
+ls
+backups example1 foo
+
+第3行我们创建了一个名为backups的新目录。 
+第4行我们将目录foo2移动到目录备份中，并将其重命名为foo3 
+第7行我们将文件barney移动到备份中。由于我们没有提供目的地名称，它保持相同的名称。
+
+重命名：
+
+现在，如果我们将目的地指定为与源相同的目录，但使用不同的名称，那么我们已经有效地使用mv重命名文件或目录。
+
+ls
+backups example1 foo
+mv foo foo3
+ls
+backups example1 foo3
+cd ..
+mkdir linuxtutorialwork/testdir
+mv linuxtutorialwork/testdir /home/ryan/linuxtutorialwork/fred
+ls linuxtutorialwork
+backups example1 foo3 fred
+
+第3行我们重命名文件foo为foo3（两条路径都是相对的）。
+第6行我们移动到父目录。这样做只是在下一行我们可以说明我们可以在文件和目录上运行命令，即使我们当前不在他们所在的目录中。
+第8行我们重命名目录testdir为fred（源路径是相对路径和目的地是一个绝对路径）。
+
+十六、删除文件（和非空目录）
+
+rm [options] <file>
+
+
 
 
 
