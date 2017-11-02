@@ -304,27 +304,43 @@ less <file>
 
 移动按键：
 Arrow keys - move the cursor around 移动光标
+
 j, k, h, l - move the cursor down, up, left and right (similar to the arrow keys) 跟箭头键作用一样
+
 ^ (caret) - move cursor to beginning of current line  移动光标到当前行的开头
+
 $ - move cursor to end of the current line   移动光标到当前行的结尾
+
 nG - move to the nth line (eg 5G moves to 5th line)   移动到第n行（例如5G移动到第五行）
+
 G - move to the last line    移动到最后一行
+
 w - move to the beginning of the next word  移动到下一个单词的开头
+
 nw - move forward n word (eg 2w moves two words forwards)   向前移动n个单词（如：2w 向前移动两个单词)
+
 b - move to the beginning of the previous word   移动到前一个单词的开头
+
 nb - move back n word     向后移动n个单词
+
 { - move backward one paragraph  向后移动一段
+
 } - move forward one paragraph   向前移动一段
 
 如果你在编辑模式下输入：set nu， 它将启用行号。
 
 删除、撤销按键：
+
 x - delete a single character 
+
 nx - delete n characters (eg 5x deletes five characters)
+
 dd - delete the current line
+
 dn - d followed by a movement command. Delete to where the movement command would have taken you. (eg d5w means delete 5 words)？？？
 
 u - Undo the last action (you may keep pressing u to keep undoing)
+
 U (Note: capital) - Undo all changes to the current line
 
 
