@@ -407,6 +407,8 @@ ls [^a-k]*
 
 secondfile thirdfile video.mpeg
 
+通配符的另外的功能：
+
 查找目录中每个文件的文件类型:
 
 file /home/ryan/*
@@ -416,7 +418,68 @@ bin: directory
 Documents: directory
 
 frog.png: PNG image data
+
 public_html: directory
+
+将所有类型的文件JPG或PNG（图像文件）移到另一个目录中:
+
+mv public_html/*.??g public_html/images/
+
+找出在每个用户的主目录bash_history文件的大小和修改时间。（.bash_history是一个典型的用户主目录保存命令，用户在命令行输入的历史文件。）
+
+ls -lh /home/*/.bash_history
+
+-rw------- 1 harry users 2.7K Jan 4 07:32 /home/harry/.bash_history
+
+-rw------- 1 ryan users 3.1K Jun 12 21:16 /home/ryan/.bash_history
+
+
+
+如何在文件和目录上设置Linux权限
+
+二十一、permission 
+
+Linux permissions dictate 3 things you may do with a file, read, write and execute. They are referred to in Linux by a single letter each.Linux权限决定了你可以用文件，读，写和执行三件事情。它们在Linux中由每个单独的字母引用。
+
+r read - you may view the contents of the file.
+
+w write - you may change the contents of the file.
+
+x execute - you may execute or run the file if it is a program or script.
+
+For every file we define 3 sets of people for whom we may specify permissions.对于每个文件，我们定义了3组我们可以指定权限的人员。
+
+owner - a single person who owns the file. (typically the person who created the file but ownership may be granted to some one else by certain users) 拥有文件的单个人。（通常是创建文件的人，但某些用户可以将所有权授予其他人）
+
+group - every file belongs to a single group.每个文件属于单个组。
+
+others - everyone else who is not in the group or the owner.不属于团队或所有者的其他人。
+
+-rwxr----x：
+
+第一个字符标识文件类型。如果是破折号（-），那么它是一个普通文件。如果是d，那么它是一个目录。
+
+以下3个字符代表所有者的权限。字母表示权限的存在，破折号表示未获得许可。在本例中，所有者拥有所有权限（读、写和执行）。
+
+以下3个字符代表组的权限。在这个示例中，组具有读但不写或执行的能力。注意，权限顺序总是被读取，然后写入然后执行。
+
+最后，最后3个字符代表其他人（或其他人）的权限。在这个示例中，它们只具有执行权限。
+
+二十二、 设置权限 chmod It stands for change file mode bits
+
+chmod [permissions] [path]
+
+chmod具有由3个组件组成的权限参数：
+
+我们要给谁改变权限？[ ugoa ]：user (or owner), group, others, all
+
+我们授予或撤销（ granting or revoking）许可—用加（+）或负（-）表示。
+
+我们设置了什么权限？-读（r），写（w）或执行（x）
+
+例子：授予该组的执行权限。然后删除所有者的写权限：
+
+
 
 
 
