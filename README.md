@@ -343,6 +343,24 @@ u - Undo the last action (you may keep pressing u to keep undoing)
 
 U (Note: capital) - Undo all changes to the current line
 
+二十、使用一组文件的方法。wildcards（通配符）
+
+通配符是一套积木（building blocks），允许你创建一个模式定义一组文件或目录。如您所记得的，每当我们在命令行中引用文件或目录时，我们实际上指的是一条路径。当我们提及一个路径，我们也可以在路径中使用通配符来把它变成一个设置文件或目录。
+
+* - represents zero or more characters
+
+? - represents a single character
+
+[] - represents a range of characters
+
+例子1：
+
+ls b*  查看首字母是b的文件，*表示后面无所谓是什么
+
+barry.txt blah.txt bob
+
+例子2：
+
 
 
 
