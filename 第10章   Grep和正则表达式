@@ -1,0 +1,6 @@
+Grep and Regular Expressions!
+
+在上一节我们知道filter可以为我们处理数据。在这一节中我们将看到另一个过滤器，是相当强大的正则表达式, 或者表示为re's。
+
+
+
