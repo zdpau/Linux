@@ -3,6 +3,8 @@
 https://www.tutorialspoint.com/unix/unix-vi-editor.htm
 https://ryanstutorials.net/linuxtutorial/vi.php
 
+Unix的哲学是“没有消息就是好消息”
+
 Linux中的许多事情不是直接完成的，而是通过了解系统的某些命令和方面的行为，并以创造性的方式使用它们来达到预期的结果。请记住，在介绍中，我们讨论了命令行，为您提供了一系列构建块。您可以随意使用这些构建块，但如果您了解它们是如何发挥功能的，那么您就可以真正有效地完成这些功能。（Many things in Linux are not done directly but by knowing the behaviour of certain commands and aspects of the system and using them in creative ways to achieve the desired outcome.Remember in the introduction we talked about the command line as providing you with a series of building blocks. You are free to use these building blocks in any way you like but you can really only do this effectively if you understand how they do their function as well as why.）
 
 Linux的基本原则之一是，每个项目只应该做一件事和一件事，我们可以很容易地将这些项目连接在一起。把它想象成一组积木，我们可以放在一起，但是我们喜欢建造任何我们想要的东西。在9节和10节中，我们将学习一些构建块。然后在第11和第13节中，我们将研究如何将它们构建成更复杂的创作，为我们做有用的工作。
